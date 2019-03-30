@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+
+h1{
+  
+  font-family: 'Aldrich',sans-serif;
+
+}
+
+
+body {
+
+    background-image: linear-gradient(hotpink, white, orange);
+}
