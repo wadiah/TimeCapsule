@@ -1,13 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Aldrich');
+
 
 h1{
-  
-  font-family: 'Aldrich',sans-serif;
 
+  font-family: 'Montserrat',sans-serif;
+
+}
+a{
+  font-family: 'Montserrat',sans-serif;
+}
+
+Cam {
+
+
+    font-size: 1.2rem;
+    color: #8726ff;
+    text-shadow: #c9c2c0;
+}
+
+
+
+
+
+p{
+  font-family: 'Montserrat',sans-serif;
 }
 
 
 body {
-
+background-size: cover;
     background-image: linear-gradient(hotpink, white, orange);
 }
