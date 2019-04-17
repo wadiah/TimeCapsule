@@ -1,64 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>The Purchase Hunt</title>
-    <link rel="icon" href="chest.ico">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<title> The Purchase Hunt </title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:regular,medium" rel="stylesheet">
 </head>
 
-<body background="campusmap.jpg" bgcolor="#c9c2c0" text="black">
+<body>
 
-    <h1 id="Zach" class="speech-bubble-ds"><a href="Zach/index.html">Zach</a></h1>
-    <!-- 41.046424, -73.700322 -->
-      <p>
-    <h1 id="Camaryn" class="speech-bubble-ds">
-      <!-- <a href="Camaryn/index.html"> -->
-        Camaryn
-      <!-- </a> -->
-    </h1>
-    <!-- 41 2'54" N  73 41'54" W -->
-      <p>
-    <h1 id="Emily" class="speech-bubble-ds">
-      <!-- <a href="Emily/index.html"> -->
-        Emily
-      <!-- </a> -->
-    </h1>
-    <!-- 41.049620, -73.709475 -->
-      <p>
-    <h1 id="Wadiah" class="speech-bubble-ds">
-      <!-- <a href="Wadiah/index.html"> -->
-        Wadiah
-      <!-- </a> -->
-    </h1>
-    <!-- 41.051639, -73.700782 -->
+<div class="wrapper">
 
-<div class="corner">
+    <img id="logo" src="images/logo2.svg" alt="The Purchase Hunt" align="center">
+
 <p>
-  <span id="description">
-    <br>
-      <b><font size="8pt">The Purchase Hunt</font>
-    <br>
-    <br>
-    Welcome to The Purchase Hunt.
-    You've just opened a time capsule which has been locked away for 10 years. In the spring of 2019, four students got together to make a location-specific time capsule, each unique to the Purchase campus. We've given you one time capsule to start with. Look through clues to find the others' time capsules and complete the treasure hunt. Or, if you happen to be on campus you may access each time capsule when you reach the respective destination.<br><br>
-    Each of these time capsules answers the following questions:<br>
-      Why did you pick this location?<br>
-      Is this space associated with negative or positive experiences?<br>
-      Who are the people who shaped your experience in that space?<br>
-      What did you take away from your experience in this location?<br>
-      What would you tell someone who is occupying the space 10 years from now?
-    <br><br>
-    This is a collaborative project between Design for Screens with Kelsey Elder and Scripting for the Web with Lee Tusman of Spring 2019. Made by: Camaryn Franchi, Zach Gemo, Emily Bottner, and Wadiah Mohammad.
-    <br>
-  </b>
-  </span>
-</p>
+
+<b>Welcome to The Purchase Hunt.</b> In the spring of 2019, four students got together to make a location-specific time capsule, each unique to the Purchase College campus. These four time capsules can only be open on <u>April 17th, 2029</u>. Starting with one time capsule, you must look for the clue to find the other capsules and complete the treasure hunt.
+<p>
+Each of these time capsules answers the following questions:</p>
+<li>Why did you pick this location?</li>
+<li>Is this space associated with negative or positive experiences?</li>
+<li>Who are the people who shaped your experience in that space?</li>
+<li>What did you take away from your experience in this location?</li>
+<li>What would you tell someone who is occupying the space 10 years from now?</li>
+<p>This is a collaborative project between Design for Screens with Kelsey Elder and Scripting for the Web with Lee Tusman of Spring 2019.</p>
+
+<div align="center">
+ <button class="button" disabled>
+     <p2>ENTER IN</p2>
+     <br><br><br>
+<p2 id="demo"></p2>
+    </button>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 17, 2029 15:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 </div>
 
-  <!-- <script src="main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<br><br>
+<p id="names">
+  Camaryn Franchi<br>
+  Zach Gemo<br>
+  Emily Bottner<br>
+  Wadiah Mohammad</p>
+
+</div>
+
 </body>
 
 </html>

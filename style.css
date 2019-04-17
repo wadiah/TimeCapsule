@@ -1,124 +1,105 @@
-a {
-  color: black;
+html {
+    background-image: url("images/campus.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-a:link, a:visited {
+@media screen and (min-width: 801px) {
+  body {
+    font-size: 1.5vw;
+  }
+  li {
+    font-size: 1.3vw;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1.5vh;
+  }
+  li {
+    font-size: 1.3vh;
+  }
+}
+
+.wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10% auto;
+    padding: 50px;
+    width: 60vw;
+
+}
+
+li {
+  font-family:'Montserrat', sans-serif;
+  margin-left: 30px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+p {
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    text-align: justify;
+    color: #333;
+
+}
+
+
+#logo {
+  width: 100%;
+  margin: 0% auto;
+
+}
+
+#names {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 80%;
+  letter-spacing: 1.5px;
+  line-height: 150%;
+}
+
+p2 {
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+
+}
+
+p2:hover {
+
+}
+
+.button {
+  background-color: #c9c2c0;
+  border: none;
+  padding: 4%;
+  text-align: center;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-body {
-  background-image: url('campusmap.jpg');
-  background-size: cover;
-  font-family: 'Montserrat', sans-serif;
-
-  /* width: 100vh; */
-  background-repeat: no-repeat;
-  padding:0;
-  margin:0 auto;
-}
-
-.speech-bubble-ds {
-    background: #ffe684;
-    border: 1px solid #99845e;
-    -webkit-border-radius: 4px;
-            border-radius: 4px;
-    -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-    font-size: 1.2rem;
-    line-height: 1.3;
-    margin: 0 auto 40px;
-    max-width: 0 auto;
-    padding: 15px;
+  display: relative;
+  font-size: 2vw;
+  margin: 10 auto;
+  /* cursor: not-allowed; */
     position: relative;
-    display: inline-block;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 1s ease-in-out;
+  color: #333;
+  transition: color 0.3s ease-in-out;
 }
 
-.speech-bubble-ds p {
-    margin-bottom: 10px;
-}
-.speech-bubble-ds p:last-of-type {
-    margin-bottom: 0;
-}
-
-.speech-bubble-ds-arrow {
-    border-left: 21px solid transparent;
-    border-top: 20px solid rgba(0, 0, 0, 0.2);
-    bottom: -25px;
-    position: absolute;
-    right: 0px;
-}
-.speech-bubble-ds-arrow::before {
-    border-left: 23px solid transparent;
-    border-top: 23px solid #a7a7a7;
-    bottom: 2px;
-    content: "";
-    position: absolute;
-    right: 5px;
-}
-.speech-bubble-ds-arrow::after {
-    border-left: 21px solid transparent;
-    border-top: 21px solid #efefef;
-    bottom: 4px;
-    content: "";
-    position: absolute;
-    right: 6px;
-}
-
-#Zach {
-  position: absolute;
-  top: 360px;
-  right: 870px;
-}
-
-#Camaryn {
-  position: absolute;
-  top: 510px;
-  left: 780px;
-  background-color: #9b9993;
-  opacity: 0.7;
-}
-
-#Emily {
-  position: absolute;
-  top: 850px;
-  left: 520px;
-  background-color: #9b9993;
-  opacity: 0.7;
-}
-
-#Wadiah {
-  position: absolute;
-  top: 190px;
-  left: 500px;
-  background-color: #9b9993;
-  opacity: 0.7;
-}
-
-.corner {
-  position: absolute;
-  bottom: 0px;
-  right: 20px;
-}
-
-#description {
+.button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white;
-  opacity: 0.7;
-  width: 480px;
-  padding: 25px;
-  /* text-transform: uppercase; */
-  font-size: 13px;
-  color: black;
-  letter-spacing: 0.5px;
-  line-height: 18px;
-  position: relative;
-
-  display: block;
+  color: #8726ff;
 }
-
-/* .corner:hover #description {
-  display: block;
-} */
